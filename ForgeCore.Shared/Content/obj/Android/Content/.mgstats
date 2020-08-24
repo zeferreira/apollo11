@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Jose Ferreira/Documents/GitHub/apollo11/ForgeCore.Shared/Content/font.spritefont","C:/Users/Jose Ferreira/Documents/GitHub/apollo11/ForgeCore.Shared/Content/bin/Android/Content/font.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,0,3505921
+"C:/Users/Jose Ferreira/Documents/GitHub/apollo11/ForgeCore.Shared/Content/Images/card.png","C:/Users/Jose Ferreira/Documents/GitHub/apollo11/ForgeCore.Shared/Content/bin/Android/Content/Images/card.xnb","TextureProcessor","Texture2DContent",96372,777085,0,0368914
+"C:/Users/Jose Ferreira/Documents/GitHub/apollo11/ForgeCore.Shared/Content/Images/card2.png","C:/Users/Jose Ferreira/Documents/GitHub/apollo11/ForgeCore.Shared/Content/bin/Android/Content/Images/card2.xnb","TextureProcessor","Texture2DContent",98778,777085,0,0309171

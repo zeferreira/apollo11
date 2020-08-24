@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>a43f2dcc-ff29-42d6-9361-736d49931b22</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ForgeCore.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Battle\Battle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Battle\EnumBattleState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Card\CardState\CardStateInHand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Card\Deck.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Card\RepositoryCard\RepositoryCardTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Card\RepositoryCard\IRepositoryCard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\GameState\GameStatePlayerLose.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\GameState\GameStatePlayerWin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\GameState\GameStatePlaying_old.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Player\EnumSideBattle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Player\IPlayerCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Player\Player.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Battle\BattleField.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Card\EnumCardType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Card\Card.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Card\CardState\CardStateDetail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Card\CardState\ICardState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameForgeEngine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObject\Components\ObjectComponentStaticImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\Test\DeviceInteractionObserverTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceController\DeviceControllerMobile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\Mouse\DeviceInteracionEventMouse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\IDeviceInteracionEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\Mouse\DeviceInteractionSubjectMouse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\IDeviceInteractionSubject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\Touch\DeviceInteracionEventTouch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\Touch\DeviceInteractionSubjectTouch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\GameState\GameStatePlaying.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\GameState\GameStatePaused.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\GameState\GameStateQuit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceController\DeviceControllerKeyBoard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceController\IDeviceController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceController\DeviceState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\GameState\IGameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObject\IObjectComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObject\GameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\IDeviceInteractionObserver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Player\PlayerController\PlayerControlerMouse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Player\PlayerController\IPlayerControler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Systems\InputSystem\InputSystem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Test\TestLoadPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Test\TestLoadCard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\TimeCounter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)GameObject\Components\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\Test\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Game\DeviceInteraction\Mouse\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Content\Images\card.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Content\Images\card2.png" />
+  </ItemGroup>
+</Project>
