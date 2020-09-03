@@ -2,9 +2,10 @@
 
 namespace ForgeCore.Shared
 {
-    public interface PlayerControler
+    public interface IPlayerControler
     {
-        //void Update();
-        IPlayerCommand GetCommand(Player player);
+        void Update();
+        IPlayerCommand GetCommand(GameObject obj);
     }
 }
+

@@ -41,24 +41,27 @@ namespace ForgeCore.Shared
         private IDeviceController _deviceController;
         public IDeviceController DeviceController { get => _deviceController; set => _deviceController = value; }
 
+        private GameConfig _gameConfig;
+        public GameConfig GameConfig { get => _gameConfig; set => _gameConfig = value; }
+        
         private GameForgeEngine()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            _graphics.PreferredBackBufferWidth = GameConfig.Instance.WScreenSize;
+            _graphics.PreferredBackBufferHeight = GameConfig.Instance.HScreenSize;
+            _graphics.IsFullScreen = GameConfig.Instance.IsFullScreen;
+
+            this.DeviceController = FactoryDeviceController.Instance.GetDeviceController();
+
 #if ANDROID
-            _graphics.IsFullScreen = true;
-            _graphics.PreferredBackBufferWidth = 800;
-            _graphics.PreferredBackBufferHeight = 480;
             _graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
-            this.DeviceController = new DeviceControllerMobile();
+            
 #elif LINUX
-            _graphics.IsFullScreen = false;
-            _graphics.PreferredBackBufferWidth = 1280;
-            _graphics.PreferredBackBufferHeight = 720;
-            this.DeviceController = new DeviceControllerKeyBoard();
+
 #endif
             this.GameState = new GameStatePlaying(this);
-            //this.GameState = new GameStatePlayerWin(this,new GameStatePlaying(this));
 
         }
 

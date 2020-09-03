@@ -31,5 +31,22 @@ namespace ForgeCore.Shared
         {
 
         }
+
+        public bool GetEnable()
+        {
+            return true;
+        }
+
+        public Rectangle GetObjectArea()
+        {
+            Rectangle area = new Rectangle();
+
+            area.X = (int)this._card.Position.X;
+            area.Y = (int)this._card.Position.Y;
+            area.Width = (int)this._card.Background.Width;
+            area.Height = (int)this._card.Background.Height;
+
+            return new Rectangle();
+        }
     }
 }

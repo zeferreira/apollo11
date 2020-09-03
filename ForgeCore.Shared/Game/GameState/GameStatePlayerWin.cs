@@ -45,7 +45,7 @@ namespace ForgeCore.Shared
         {
             this._gameBase.DeviceController.Update();
 
-            DeviceState inputState = this._gameBase.DeviceController.GetInputState();
+            DeviceControllerState inputState = this._gameBase.DeviceController.GetInputState();
 
             if (inputState.Q)
             {

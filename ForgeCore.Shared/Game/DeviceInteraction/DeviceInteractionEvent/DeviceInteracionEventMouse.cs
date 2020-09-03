@@ -1,15 +1,14 @@
-﻿using Microsoft.Xna.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ForgeCore.Shared
 {
-    public class DeviceInteracionEventMouse : IDeviceInteracionEvent
+    public class DeviceInteracionEventMouse : DeviceInteracionEvent
     {
-        Point _position;
-        public Point Position { get => _position; set => _position = value; }
-
         private bool _rightButtonPressed;
         public bool RightButtonPressed { get => _rightButtonPressed; set => _rightButtonPressed = value; }
 

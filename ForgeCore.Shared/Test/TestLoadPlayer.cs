@@ -28,7 +28,7 @@ namespace ForgeCore.Shared
 
             for (int i = 0; i < deckSize; i++)
             {
-                cards.Add(TestLoaderCard.GetCard());
+                cards.Add(TestLoaderCard.GetCardStack());
             }
 
             return cards;

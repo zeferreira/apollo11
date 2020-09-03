@@ -7,6 +7,6 @@ namespace ForgeCore.Shared
     public interface IDeviceController
     {
         void Update();
-        DeviceState GetInputState();
+        DeviceControllerState GetInputState();
     }
 }

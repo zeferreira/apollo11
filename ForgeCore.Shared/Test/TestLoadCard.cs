@@ -5,20 +5,73 @@ namespace ForgeCore.Shared
 {
     public class TestLoaderCard
     {
-        public static Card GetCard()
+        public static Card GetCardStack()
         {
-            Card theFirstDraft = new Card(0);
+            Card theFirstDraftCard = new Card(0);
 
-            theFirstDraft.Background = GameForgeEngine.Instance.Content.Load<Texture2D>(@"Images\card");
+            theFirstDraftCard.Background = GameForgeEngine.Instance.Content.Load<Texture2D>(@"Images\card");
 
             Viewport viewport = GameForgeEngine.Instance.Graphics.GraphicsDevice.Viewport;
 
             Vector2 screenCenter = new Vector2(viewport.Width / 2f, viewport.Height / 2f);
             //Vector2 imageCenter = new Vector2(theFirstDraft.Background.Width / 2f, theFirstDraft.Background.Height / 2f);
 
-            theFirstDraft.Position = screenCenter;
+            theFirstDraftCard.Position = screenCenter;
+            theFirstDraftCard.SetCardState(new CardStateStack(theFirstDraftCard));
 
-            return theFirstDraft;
+            return theFirstDraftCard;
         }
+
+        public static Card GetCardDetail()
+        {
+            Card theFirstDraftCard = new Card(0);
+
+            theFirstDraftCard.Background = GameForgeEngine.Instance.Content.Load<Texture2D>(@"Images\card");
+
+            Viewport viewport = GameForgeEngine.Instance.Graphics.GraphicsDevice.Viewport;
+
+            Vector2 screenCenter = new Vector2(viewport.Width / 2f, viewport.Height / 2f);
+            //Vector2 imageCenter = new Vector2(theFirstDraft.Background.Width / 2f, theFirstDraft.Background.Height / 2f);
+
+            theFirstDraftCard.Position = screenCenter;
+            theFirstDraftCard.SetCardState(new CardStateDetail(theFirstDraftCard));
+
+            return theFirstDraftCard;
+        }
+
+        public static Card GetCardHand()
+        {
+            Card theFirstDraftCard = new Card(0);
+
+            theFirstDraftCard.Background = GameForgeEngine.Instance.Content.Load<Texture2D>(@"Images\card");
+
+            Viewport viewport = GameForgeEngine.Instance.Graphics.GraphicsDevice.Viewport;
+
+            Vector2 screenCenter = new Vector2(viewport.Width / 2f, viewport.Height / 2f);
+            //Vector2 imageCenter = new Vector2(theFirstDraft.Background.Width / 2f, theFirstDraft.Background.Height / 2f);
+
+            theFirstDraftCard.Position = screenCenter;
+            theFirstDraftCard.SetCardState(new CardStateHand(theFirstDraftCard));
+
+            return theFirstDraftCard;
+        }
+
+        public static Card GetCardBoard()
+        {
+            Card theFirstDraftCard = new Card(0);
+
+            theFirstDraftCard.Background = GameForgeEngine.Instance.Content.Load<Texture2D>(@"Images\card");
+
+            Viewport viewport = GameForgeEngine.Instance.Graphics.GraphicsDevice.Viewport;
+
+            Vector2 screenCenter = new Vector2(viewport.Width / 2f, viewport.Height / 2f);
+            //Vector2 imageCenter = new Vector2(theFirstDraft.Background.Width / 2f, theFirstDraft.Background.Height / 2f);
+
+            theFirstDraftCard.Position = screenCenter;
+            theFirstDraftCard.SetCardState(new CardStateBoard(theFirstDraftCard));
+
+            return theFirstDraftCard;
+        }
+
     }
 }

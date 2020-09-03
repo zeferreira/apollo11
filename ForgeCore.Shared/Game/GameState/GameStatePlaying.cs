@@ -17,20 +17,17 @@ namespace ForgeCore.Shared
         
         IDeviceInteractionSubject _deviceInteracionSubject;
 
-        List<GameObject> _gameObjects;
-
-        Battle _battle;
+        BattleServer _battle;
 
         public GameStatePlaying(GameForgeEngine gameBase)
         {
             this._gameBase = gameBase;
-            this._gameObjects = new List<GameObject>();
-            this._battle = new Battle();
+            this._battle = new BattleServer();
         }
 
         public void LoadContent()
         {
-            this._battle = new Battle(TestLoadPlayer.GetPlayerForBattle(), TestLoadPlayer.GetPlayerForBattle());
+            this._battle = new BattleServer(TestLoadPlayer.GetPlayerForBattle(), TestLoadPlayer.GetPlayerForBattle());
         }
 
         public void UnloadContent()
@@ -43,7 +40,7 @@ namespace ForgeCore.Shared
             //controls
             this._gameBase.DeviceController.Update();
 
-            DeviceState inputState = this._gameBase.DeviceController.GetInputState();
+            DeviceControllerState inputState = this._gameBase.DeviceController.GetInputState();
             
             if (inputState.Q)
             {

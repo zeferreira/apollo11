@@ -7,14 +7,14 @@ namespace ForgeCore.Shared
 {
     public class DeviceControllerKeyBoard : IDeviceController
     {
-        private DeviceState _deviceState;
+        private DeviceControllerState _deviceState;
 
         KeyboardState _keysCurrent;
         KeyboardState _keysLast;
 
         public void Update()
         {
-            this._deviceState = new DeviceState();
+            this._deviceState = new DeviceControllerState();
 
             _keysLast = _keysCurrent;
             _keysCurrent = Keyboard.GetState();
@@ -35,7 +35,7 @@ namespace ForgeCore.Shared
             }
         }
 
-        public DeviceState GetInputState()
+        public DeviceControllerState GetInputState()
         {
             return this._deviceState;
         }

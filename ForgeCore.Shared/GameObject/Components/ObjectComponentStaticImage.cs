@@ -8,5 +8,10 @@ namespace ForgeCore.Shared
         {
 
         }
+
+        private void Draw()
+        {
+
+        }
     }
 }

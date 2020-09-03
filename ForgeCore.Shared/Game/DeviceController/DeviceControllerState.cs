@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ForgeCore.Shared
 {
-    public class DeviceState
+    public class DeviceControllerState
     {
         //Console buttons 
         private bool _p;

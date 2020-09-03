@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ForgeCore.Shared
 {
-    public class DeviceInteracionEventTouch : IDeviceInteracionEvent
+    public class DeviceInteracionEventTouch_old : IDeviceInteracionEvent
     {
         Point _position;
         public Point Position { get => _position; set => _position = value; }
@@ -18,5 +18,6 @@ namespace ForgeCore.Shared
 
         //private bool _leftButtonPressed;
         //public bool LeftButtonPressed { get => _leftButtonPressed; set => _leftButtonPressed = value; }
+
     }
 }

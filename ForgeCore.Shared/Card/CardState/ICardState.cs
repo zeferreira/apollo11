@@ -1,8 +1,14 @@
-﻿namespace ForgeCore.Shared
+﻿using Microsoft.Xna.Framework;
+
+namespace ForgeCore.Shared
 {
     public interface ICardState
     {
-        void Draw();
+        //interaction state for devices
+        Rectangle GetObjectArea();
+        bool GetEnable(); 
+
+        void Draw();//really need this?
         void Update();
     }
 }

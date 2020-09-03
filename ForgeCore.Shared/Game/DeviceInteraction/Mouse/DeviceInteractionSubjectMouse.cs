@@ -20,7 +20,7 @@ namespace ForgeCore.Shared
 
             MouseState state = Mouse.GetState();
 
-            e.Position = state.Position;
+            e.Position = state.Position.ToVector2();
 
             // Check if Right Mouse Button pressed, if so, exit
             if (state.RightButton == ButtonState.Pressed)
@@ -33,7 +33,7 @@ namespace ForgeCore.Shared
                 e.LeftButtonPressed = true;
             }
 
-            Notify(e);
+            //Notify(e);
         }
     }
 }

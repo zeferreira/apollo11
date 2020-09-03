@@ -13,9 +13,6 @@ namespace ForgeCore.Shared
         private byte _life;
         public byte Life { get => _life; set => _life = value; }
 
-        private EnumSideBattle _sideBattle;
-        public EnumSideBattle SideBattle { get => _sideBattle; set => _sideBattle = value; }
-
         private List<Card> _handOfCards;
         public List<Card> HandOfCards { get => _handOfCards; set => _handOfCards = value; }
 
@@ -55,10 +52,6 @@ namespace ForgeCore.Shared
 
         private void DrawHand()
         {
-            Viewport viewport = GameForgeEngine.Instance.Graphics.GraphicsDevice.Viewport;
-
-            Vector2 screenCenter = new Vector2(viewport.Width / 2f, viewport.Height / 2f);
-
             foreach (var item in this._handOfCards)
             {
                 item.Draw();

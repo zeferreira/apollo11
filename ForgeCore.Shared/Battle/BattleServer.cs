@@ -2,7 +2,7 @@
 
 namespace ForgeCore.Shared
 {
-    public class Battle
+    public class BattleServer
     {
         private int _initialCardHandNumber;
 
@@ -28,14 +28,14 @@ namespace ForgeCore.Shared
 
         float currentTime = 0f;
 
-        public Battle()
+        public BattleServer()
         {
             currentTime = 0f;
             this._firstTurn = true;
             _initialCardHandNumber = 3;
         }
 
-        public Battle(Player topPlayer, Player downPlayer)
+        public BattleServer(Player topPlayer, Player downPlayer)
         {
             this._turnFinished = false;
             this._firstTurn = true;

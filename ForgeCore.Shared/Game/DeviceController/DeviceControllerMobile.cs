@@ -7,11 +7,11 @@ namespace ForgeCore.Shared
 {
     public class DeviceControllerMobile : IDeviceController
     {
-        private DeviceState _deviceState;
+        private DeviceControllerState _deviceState;
 
         public void Update()
         {
-            this._deviceState = new DeviceState();
+            this._deviceState = new DeviceControllerState();
 
             if (GamePad.GetState(0).Buttons.Back == ButtonState.Pressed) 
             {
@@ -19,7 +19,7 @@ namespace ForgeCore.Shared
             }
         }
 
-        public DeviceState GetInputState()
+        public DeviceControllerState GetInputState()
         {
             return this._deviceState;
         }

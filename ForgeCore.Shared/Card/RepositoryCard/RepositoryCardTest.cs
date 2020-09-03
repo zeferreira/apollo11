@@ -12,7 +12,9 @@ namespace ForgeCore.Shared
 
             for (int i = 0; i < 10; i++)
             {
-                result.Add(TestLoaderCard.GetCard());
+                Card c = TestLoaderCard.GetCardStack();
+                c.SetCardState(new CardStateDetail(c));
+                result.Add(c);
             }
 
             return result;

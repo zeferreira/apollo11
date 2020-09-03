@@ -27,11 +27,11 @@ namespace ForgeCore.Shared
                 {
                     //do what you want here when users tap the screen
                     e.Pressed = true;
-                    e.Position = item.Position.ToPoint();
+                    e.Position = item.Position;
                 }
             }
 
-            Notify(e);
+            //Notify(e);
         }
     }
 }
